@@ -1,0 +1,178 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fuentes utilizadas */
+@font-face {
+    font-family: chinese;
+    src: url(../assets/fonts/chinese-rocks.otf);
+}
+
+@font-face{
+    font-family: gotham;
+    src: url(../assets/fonts/gotham-black.otf);
+}
+
+/* estilos barra navegación */
+header .container-fluid li a{
+    color: white;
+    font-family: chinese;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+header .container-fluid li a:hover{
+    color: #7567C3;
+}
+
+header .container-fluid li button{
+    color: white;
+}
+
+/* estilos generales */
+main{
+    background-color: #151515;
+}
+
+.contenedor{
+    padding-bottom: 2.5rem;
+}
+
+p{
+    color: rgb(208, 208, 208);  
+}
+
+/* Estilo de los titulos */
+.titulo-seccion{ 
+    font-size: 46px;
+    margin-bottom: 1rem;
+    color: #91BCE9;
+    display: block;
+    text-align: center;
+    font-family: chinese;
+}
+
+/* index - estilos sección "próximos shows"*/
+.seccion-proximos-shows{
+    background-image: url(../assets/img/img-principales/foto-proximas-fechas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 2rem;
+}
+
+    /* estilos de la tabla */
+    .grid-tabla{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 50%);
+        row-gap: 1rem;
+        text-align: center; 
+    }
+
+    .grid-tabla p{
+        font-family: ghotam;
+        font-size: 1.2rem;
+    }
+
+    .grid-tabla .item-fecha{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .grid-tabla .grid-item hr{
+        color: rgb(208, 208, 208);
+    }
+
+    .grid-tabla a{
+        text-decoration: none;
+        color: #ce9926;
+        font-family: chinese;
+        font-weight: 900;
+    }
+
+    .grid-tabla a:hover{
+        color: white;        
+    }
+
+/* index - estilos sección "discografía"*/
+.img-arte-de-tapa .img-disco{
+    margin: auto;
+    display: block;
+    height: 18rem;
+}
+
+/* index - estilo sección "video" */
+iframe {
+    display: block;
+    margin: auto;
+}
+
+/* Estilos footer */
+footer{
+    background-color:black;
+    text-align: center;
+}
+
+.redes{
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    justify-content:center;
+    padding: 1rem;
+}
+
+.link-icon svg{
+    width: 40px;
+    height: 40px;
+    color: white
+}
+
+.link-icon svg:hover{
+    color: #7567C3;
+}
+
+.nuestras-redes p{
+    margin-top: 2rem;
+}
+
+/* estilos pages: GALERIA */
+.galeria-links{
+    height: 58vh;
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    grid-template-rows: repeat(2,50%);
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.galeria-links img{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-links img:hover{
+    opacity: 1;
+}
+
+/* estilos pages: BIOGRAFIA */
+.contenedor-bio{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+}
+
+.contenedor-bio img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: span 1;
+}
