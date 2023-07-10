@@ -17,6 +17,11 @@
 }
 
 /* estilos barra navegación */
+
+header .container-fluid{
+    margin: 0rem 0rem 0rem 0rem;
+}
+
 header .container-fluid li a{
     color: white;
     font-family: chinese;
@@ -31,6 +36,8 @@ header .container-fluid li a:hover{
 header .container-fluid li button{
     color: white;
 }
+
+
 
 /* estilos generales */
 main{
@@ -120,8 +127,7 @@ footer{
 }
 
 .redes{
-    display: grid;
-    grid-template-columns: repeat(4, 20%);
+    display: flex;
     justify-content:center;
     padding: 1rem;
 }
@@ -129,7 +135,8 @@ footer{
 .link-icon svg{
     width: 40px;
     height: 40px;
-    color: white
+    color: white;
+    margin: 0rem 2rem 0rem 2rem;
 }
 
 .link-icon svg:hover{
@@ -142,7 +149,7 @@ footer{
 
 /* estilos pages: GALERIA */
 .galeria-links{
-    height: 58vh;
+    height: 60vh;
     display: grid;
     grid-template-columns: repeat(2,40%);
     grid-template-rows: repeat(2,50%);
@@ -176,3 +183,123 @@ footer{
     object-fit: cover;
     grid-column: span 1;
 }
+
+
+/* media querys TABLET */
+@media screen and (min-width: 800px){
+    main{
+        background-color:aquamarine;
+    }
+
+    header .container-fluid{
+        margin: 0rem 2rem 0rem 2rem;
+    }
+
+    .grid-tabla{
+        grid-template-columns: repeat(2,50%);
+    }
+
+    hr{
+        display: none;
+    }
+
+    .img-arte-de-tapa .img-disco{
+        height: 22rem;
+    }
+
+    iframe {
+        height: 340px;
+        width: 600px;
+    }
+
+    .link-icon svg{
+        width: 40px;
+        height: 40px;
+        color: white;
+        margin: 0rem 2.5rem 0rem 2.5rem;
+    }
+
+    .galeria-links{
+        grid-template-columns: repeat(4,20%);
+        grid-template-rows: 100%;
+    }
+
+    .contenedor-bio{
+        grid-template-columns: 30% 20% 40%;
+        grid-template-rows: 35% 35% 20%;
+        row-gap: 0.5rem;
+    }
+
+    .contenedor-bio img{
+        grid-column: span 2;
+        grid-row: span 2;
+        margin-left: 1rem;
+    }
+
+    #ultimo{
+        grid-column: span 4;
+        margin-left: 1rem;
+    }
+
+    .contenedor-bio p{
+        grid-column: span 2;
+        grid-row: span 1;
+        margin-left: 2rem;
+    }
+}
+  
+/* media querys DESKTOP */
+@media screen and (min-width: 1200px){
+    main{
+        background-color:#ce9926;
+    }
+
+    .grid-tabla{
+        grid-template-columns: 90%;
+        grid-template-rows: repeat(2,auto);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .grid-tabla .grid-item{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        justify-content: center;
+    }
+
+    .img-arte-de-tapa .img-disco{
+        height: 26rem;
+    }
+
+    iframe {
+        height: 400px;
+        width: 650px;
+    }
+
+    .contenedor-bio{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: repeat(3,30%);
+        row-gap: 0.5rem;
+    }
+
+    .contenedor-bio img{
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .contenedor-bio p{
+        grid-column: span 1;
+        margin-left: 2rem;
+    }
+
+    #ultimo{
+        grid-column: span 1;
+        margin-left: 2rem;
+    }
+
+}
+
+
+
+
+
