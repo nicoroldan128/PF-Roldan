@@ -22,6 +22,7 @@ header .container-fluid{
     margin: 0rem 0rem 0rem 0rem;
 }
 
+
 header .container-fluid li a{
     color: white;
     font-family: chinese;
@@ -36,8 +37,6 @@ header .container-fluid li a:hover{
 header .container-fluid li button{
     color: white;
 }
-
-
 
 /* estilos generales */
 main{
@@ -126,26 +125,26 @@ footer{
     text-align: center;
 }
 
-.redes{
-    display: flex;
-    justify-content:center;
-    padding: 1rem;
-}
+    .redes{
+        display: flex;
+        justify-content:center;
+        padding: 1rem;
+    }
 
-.link-icon svg{
-    width: 40px;
-    height: 40px;
-    color: white;
-    margin: 0rem 2rem 0rem 2rem;
-}
+    .nuestras-redes p{
+        margin-top: 2rem;
+    }
 
-.link-icon svg:hover{
-    color: #7567C3;
-}
+    .link-icon svg{
+        width: 40px;
+        height: 40px;
+        color: white;
+        margin: 0rem 2rem 0rem 2rem;
+    }
 
-.nuestras-redes p{
-    margin-top: 2rem;
-}
+    .link-icon svg:hover{
+        color: #7567C3;
+    }
 
 /* estilos pages: GALERIA */
 .galeria-links{
@@ -184,11 +183,26 @@ footer{
     grid-column: span 1;
 }
 
+/* estilos pages: GALERIA - carpeta uno */
+main .galeria-imagenes-uno{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+main .galeria-imagenes-uno div img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
 
 /* media querys TABLET */
 @media screen and (min-width: 800px){
-    main{
-        background-color:aquamarine;
+
+    .bio-contenedor{
+        height: 75vh;
     }
 
     header .container-fluid{
@@ -226,7 +240,7 @@ footer{
 
     .contenedor-bio{
         grid-template-columns: 30% 20% 40%;
-        grid-template-rows: 35% 35% 20%;
+        grid-template-rows: 35% 35% 30%;
         row-gap: 0.5rem;
     }
 
@@ -246,14 +260,33 @@ footer{
         grid-row: span 1;
         margin-left: 2rem;
     }
+
+    main .galeria-imagenes-uno{
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: repeat(5, 20%);
+    }
+
+    main .galeria-imagenes-uno .img-span-uno{
+        grid-row: span 1;
+    }
+
+    main .galeria-imagenes-uno .img-span-dos{
+        grid-row: span 2;
+    }
+
+    main .galeria-imagenes-uno .img-catorce{
+        display: none;
+    }
+
 }
   
 /* media querys DESKTOP */
 @media screen and (min-width: 1200px){
-    main{
-        background-color:#ce9926;
-    }
 
+    .bio-contenedor{
+        height: 75vh;
+    }
+    
     .grid-tabla{
         grid-template-columns: 90%;
         grid-template-rows: repeat(2,auto);
@@ -295,6 +328,16 @@ footer{
     #ultimo{
         grid-column: span 1;
         margin-left: 2rem;
+    }
+
+    main .galeria-imagenes-uno{
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(4, 25%);
+        gap: 0.2rem;
+    }
+
+    main .galeria-imagenes-uno .img-catorce{
+        display: block;
     }
 
 }
