@@ -53,12 +53,24 @@ p{
 
 /* Estilo de los titulos */
 .titulo-seccion{ 
-    font-size: 46px;
+    font-size: 48px;
     margin-bottom: 1rem;
     color: #91BCE9;
     display: block;
     text-align: center;
     font-family: chinese;
+}
+
+.subtitulo-seccion{
+    font-size:36px;
+    color: #a88231;
+    display: block;
+    text-align: center;
+    font-family: chinese;
+}
+
+.titulo-pages{
+    padding-top: 2rem;
 }
 
 /* index - estilos sección "próximos shows"*/
@@ -73,10 +85,11 @@ p{
 
     /* estilos de la tabla */
     .grid-tabla{
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 50%);
+        /*grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 50%);*/
         row-gap: 1rem;
         text-align: center; 
     }
@@ -198,6 +211,24 @@ main .galeria-imagenes-uno div img{
     object-fit: cover; 
 }
 
+.iframe-contenedor{
+    display: grid;
+    row-gap: 2rem;
+    justify-content: center;
+}
+
+.contenedor-btn{
+    text-align: center;
+}
+
+.btn a{
+    text-decoration: none;
+}
+
+.btn a:hover{
+    background-color: yellow
+}
+
 /* media querys TABLET */
 @media screen and (min-width: 800px){
 
@@ -210,6 +241,7 @@ main .galeria-imagenes-uno div img{
     }
 
     .grid-tabla{
+        display: grid;
         grid-template-columns: repeat(2,50%);
     }
 
@@ -284,7 +316,7 @@ main .galeria-imagenes-uno div img{
 @media screen and (min-width: 1200px){
 
     .bio-contenedor{
-        height: 75vh;
+        height: auto;
     }
     
     .grid-tabla{
@@ -300,6 +332,11 @@ main .galeria-imagenes-uno div img{
         justify-content: center;
     }
 
+    .grid-tabla .grid-item hr{
+        display: block;
+        grid-column: span 4;
+    }
+
     .img-arte-de-tapa .img-disco{
         height: 26rem;
     }
@@ -310,8 +347,8 @@ main .galeria-imagenes-uno div img{
     }
 
     .contenedor-bio{
-        grid-template-columns: 45% 45%;
-        grid-template-rows: repeat(3,30%);
+        grid-template-columns: 35% 40%;
+        grid-template-rows: repeat(3,auto);
         row-gap: 0.5rem;
     }
 
