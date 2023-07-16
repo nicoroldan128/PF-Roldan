@@ -1,0 +1,136 @@
+@import "utilidades/variables";
+
+@import "utilidades/mixin";
+@import "utilidades/extend";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+// fuentes utilizadas
+@font-face {
+    font-family: chinese;
+    src: url(../assets/fonts/chinese-rocks.otf);
+}
+
+@font-face {
+    font-family: ghotam;
+    src: url(../assets/fonts/ghotam-rocks.otf);
+}
+
+// Estilos generales
+
+// Estilos barra navegación
+header{
+    nav{
+        .container-fluid{
+            margin: 0rem;
+        
+            ul{
+                li{
+                    a{
+                        color: $color-cuarto;
+                        font-family: chinese;
+                        font-size: 1.5rem;
+                        margin-left: 2rem;
+                        
+                        &:hover{
+                            color: $color-secundario;
+                        }  
+                    }     
+                }
+            }
+
+            @include tablet {
+                margin: 0rem 2rem 0rem 2rem;
+            } 
+        }        
+    }    
+}
+
+body{
+    main{
+        background-color: $color-body;
+        .contenedor {
+            padding-bottom: 2.5rem;
+
+            .titulo-seccion{
+                @extend %titulos;
+            }
+            .subtitulo-seccion{
+                font-size:36px;
+                color: $color-tercero;
+                display: block;
+                text-align: center;
+                font-family: chinese;
+            }
+            .titulo-pages{
+                padding-top: 2rem;
+            }
+
+            p{
+                color: $color-parrafo;
+            }
+        }
+    }
+}
+
+// Estilos del footer
+
+
+@import "html/index";
+
+body{
+    footer{
+        background-color:$color-footer;
+        text-align: center;
+
+        .contenedor {
+            padding-bottom: 2.5rem;
+            .titulo-seccion--footer{
+                @extend %titulos;
+                padding-top: 2rem;
+            }
+            p{
+                margin-top: 2rem;
+                color: $color-parrafo;  
+            }
+            .redes{
+                display: flex;
+                justify-content:center;
+                padding: 1rem;
+            }
+            .link-icon{
+                svg{
+                    width: 40px;
+                    height: 40px;
+                    color: $color-cuarto;
+                    margin: 0rem 1rem 0rem 1rem;
+
+                    &:hover{
+                        color: $color-secundario;
+                    }
+
+                    @include tablet {
+                        margin: 0rem 2.5rem 0rem 2.5rem;
+                    }  
+                }
+            }
+        }
+    } 
+}
+
+// Estilos pagina BIO
+@import "html/bio";
+
+// Estilos pagina VIDEO
+@import "html/video";
+
+// Estilos pagina GALERIA
+@import "html/galeria";
+
+// Estilos pagina GALERIA
+@import "html/galeria-carpeta-uno"
+

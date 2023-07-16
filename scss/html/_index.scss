@@ -1,0 +1,116 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+
+/* Estilos sección "próximos shows" */
+body{
+    main{
+        .contenedor{
+            .seccion-proximos-shows{
+                background-image: url(../assets/img/img-principales/foto-proximas-fechas.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                padding: 2rem;
+            }
+            .grid-tabla{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 1rem;
+                text-align: center; 
+
+                @include tablet {
+                    display: grid;
+                    grid-template-columns: repeat(2,50%);
+                } 
+                @include desktop {
+                    grid-template-columns: 90%;
+                    grid-template-rows: repeat(2,auto);
+                    margin-top: 30px;
+                    margin-bottom: 30px;            
+                }
+
+                .grid-item{
+                    @include desktop {
+                        display: grid;
+                        grid-template-columns: repeat(4,25%);
+                        justify-content: center;
+                    }
+
+                    hr{
+                        color: $color-parrafo;
+                        @include tablet {
+                            display: none;
+                        } 
+                        @include desktop {
+                            display: block;
+                            grid-column: span 4;                    
+                        }
+                    }
+                    .item-fecha{
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-family: ghotam;
+                        font-size: 1.2rem;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $color-tercero;
+                        font-family: chinese;
+                        font-weight: 900;
+
+                        &:hover{
+                            color: $color-cuarto;        
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Estilos sección "discografía" */
+body{
+    main{
+        .contenedor{
+            .img-arte-de-tapa{
+                .img-disco{
+                    margin: auto;
+                    display: block;
+                    height: 18rem;
+
+                    @include tablet {
+                        height: 22rem;
+                    } 
+                    @include desktop {
+                        height: 26rem;
+                    }
+                }
+            }            
+        }
+    }
+}
+
+/* Estilos sección "video" */
+body{
+    main{
+        .contenedor{
+            iframe {
+                display: block;
+                margin: auto;
+                @include tablet{
+                    height: 340px;
+                    width: 600px;
+                }
+                @include desktop{
+                    height: 400px;
+                    width: 650px;
+                }   
+            }            
+        }
+    }
+}

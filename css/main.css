@@ -1,385 +1,266 @@
-/* reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@charset "UTF-8";
+body main .contenedor .titulo-seccion, body footer .contenedor .titulo-seccion--footer {
+  font-size: 48px;
+  margin-bottom: 1rem;
+  color: #91BCE9;
+  display: block;
+  text-align: center;
+  font-family: chinese; }
 
-/* fuentes utilizadas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 @font-face {
-    font-family: chinese;
-    src: url(../assets/fonts/chinese-rocks.otf);
-}
+  font-family: chinese;
+  src: url(../assets/fonts/chinese-rocks.otf); }
 
-@font-face{
-    font-family: gotham;
-    src: url(../assets/fonts/gotham-black.otf);
-}
+@font-face {
+  font-family: ghotam;
+  src: url(../assets/fonts/ghotam-rocks.otf); }
 
-/* estilos barra navegación */
-
-header .container-fluid{
-    margin: 0rem 0rem 0rem 0rem;
-}
-
-
-header .container-fluid li a{
+header nav .container-fluid {
+  margin: 0rem; }
+  header nav .container-fluid ul li a {
     color: white;
     font-family: chinese;
     font-size: 1.5rem;
-    margin-left: 2rem;
-}
+    margin-left: 2rem; }
+    header nav .container-fluid ul li a:hover {
+      color: #7567C3; }
+  @media screen and (min-width: 800px) {
+    header nav .container-fluid {
+      margin: 0rem 2rem 0rem 2rem; } }
 
-header .container-fluid li a:hover{
-    color: #7567C3;
-}
+body main {
+  background-color: #151515; }
+  body main .contenedor {
+    padding-bottom: 2.5rem; }
+    body main .contenedor .subtitulo-seccion {
+      font-size: 36px;
+      color: #a88231;
+      display: block;
+      text-align: center;
+      font-family: chinese; }
+    body main .contenedor .titulo-pages {
+      padding-top: 2rem; }
+    body main .contenedor p {
+      color: #d0d0d0; }
 
-header .container-fluid li button{
-    color: white;
-}
+/* Estilos sección "próximos shows" */
+body main .contenedor .seccion-proximos-shows {
+  background-image: url(../assets/img/img-principales/foto-proximas-fechas.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 2rem; }
 
-/* estilos generales */
-main{
-    background-color: #151515;
-}
-
-.contenedor{
-    padding-bottom: 2.5rem;
-}
-
-p{
-    color: rgb(208, 208, 208);  
-}
-
-/* Estilo de los titulos */
-.titulo-seccion{ 
-    font-size: 48px;
-    margin-bottom: 1rem;
-    color: #91BCE9;
-    display: block;
-    text-align: center;
-    font-family: chinese;
-}
-
-.subtitulo-seccion{
-    font-size:36px;
+body main .contenedor .grid-tabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  text-align: center; }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .grid-tabla {
+      display: grid;
+      grid-template-columns: repeat(2, 50%); } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .grid-tabla {
+      grid-template-columns: 90%;
+      grid-template-rows: repeat(2, auto);
+      margin-top: 30px;
+      margin-bottom: 30px; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .grid-tabla .grid-item {
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      justify-content: center; } }
+  body main .contenedor .grid-tabla .grid-item hr {
+    color: #d0d0d0; }
+    @media screen and (min-width: 800px) {
+      body main .contenedor .grid-tabla .grid-item hr {
+        display: none; } }
+    @media screen and (min-width: 1200px) {
+      body main .contenedor .grid-tabla .grid-item hr {
+        display: block;
+        grid-column: span 4; } }
+  body main .contenedor .grid-tabla .grid-item .item-fecha {
+    font-size: 1.5rem;
+    font-weight: 600; }
+  body main .contenedor .grid-tabla .grid-item p {
+    font-family: ghotam;
+    font-size: 1.2rem; }
+  body main .contenedor .grid-tabla .grid-item a {
+    text-decoration: none;
     color: #a88231;
-    display: block;
-    text-align: center;
     font-family: chinese;
-}
+    font-weight: 900; }
+    body main .contenedor .grid-tabla .grid-item a:hover {
+      color: white; }
 
-.titulo-pages{
-    padding-top: 2rem;
-}
+/* Estilos sección "discografía" */
+body main .contenedor .img-arte-de-tapa .img-disco {
+  margin: auto;
+  display: block;
+  height: 18rem; }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .img-arte-de-tapa .img-disco {
+      height: 22rem; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .img-arte-de-tapa .img-disco {
+      height: 26rem; } }
 
-/* index - estilos sección "próximos shows"*/
-.seccion-proximos-shows{
-    background-image: url(../assets/img/img-principales/foto-proximas-fechas.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Estilos sección "video" */
+body main .contenedor iframe {
+  display: block;
+  margin: auto; }
+  @media screen and (min-width: 800px) {
+    body main .contenedor iframe {
+      height: 340px;
+      width: 600px; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor iframe {
+      height: 400px;
+      width: 650px; } }
+
+body footer {
+  background-color: black;
+  text-align: center; }
+  body footer .contenedor {
+    padding-bottom: 2.5rem; }
+    body footer .contenedor .titulo-seccion--footer {
+      padding-top: 2rem; }
+    body footer .contenedor p {
+      margin-top: 2rem;
+      color: #d0d0d0; }
+    body footer .contenedor .redes {
+      display: flex;
+      justify-content: center;
+      padding: 1rem; }
+    body footer .contenedor .link-icon svg {
+      width: 40px;
+      height: 40px;
+      color: white;
+      margin: 0rem 1rem 0rem 1rem; }
+      body footer .contenedor .link-icon svg:hover {
+        color: #7567C3; }
+      @media screen and (min-width: 800px) {
+        body footer .contenedor .link-icon svg {
+          margin: 0rem 2.5rem 0rem 2.5rem; } }
+
+/* Estilos pages: BIOGRAFIA */
+body main .contenedor .contenedor-bio {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  justify-content: center;
+  padding: 0rem 1.5rem 0rem 1.5rem; }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .contenedor-bio {
+      grid-template-columns: 30% 20% 40%;
+      grid-template-rows: 35% 35% 30%;
+      row-gap: 0.5rem; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .contenedor-bio {
+      grid-template-columns: 35% 40%;
+      grid-template-rows: repeat(3, auto); } }
+  body main .contenedor .contenedor-bio img {
     width: 100%;
-    padding: 2rem;
-}
+    height: 100%;
+    object-fit: cover;
+    grid-column: span 1; }
+    @media screen and (min-width: 800px) {
+      body main .contenedor .contenedor-bio img {
+        grid-column: span 2;
+        grid-row: span 2;
+        margin-left: 1rem; } }
+    @media screen and (min-width: 1200px) {
+      body main .contenedor .contenedor-bio img {
+        grid-column: span 1;
+        grid-row: span 3; } }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .contenedor-bio p {
+      grid-column: span 2;
+      grid-row: span 1;
+      margin-left: 2rem; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .contenedor-bio p {
+      grid-column: span 1; } }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .contenedor-bio #ultimo {
+      grid-column: span 4;
+      margin-left: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .contenedor-bio #ultimo {
+      grid-column: span 1;
+      margin-left: 2rem; } }
 
-    /* estilos de la tabla */
-    .grid-tabla{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /*grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 50%);*/
-        row-gap: 1rem;
-        text-align: center; 
-    }
+@media screen and (min-width: 800px) {
+  body .bio-contenedero {
+    height: 75vh; } }
 
-    .grid-tabla p{
-        font-family: ghotam;
-        font-size: 1.2rem;
-    }
+@media screen and (min-width: 1200px) {
+  body .bio-contenedero {
+    height: auto; } }
 
-    .grid-tabla .item-fecha{
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
+/* Estilos pages: VIDEO */
+body main .contenedor-btn {
+  text-align: center; }
+  body main .contenedor-btn .btn {
+    margin-top: 1rem; }
 
-    .grid-tabla .grid-item hr{
-        color: rgb(208, 208, 208);
-    }
-
-    .grid-tabla a{
-        text-decoration: none;
-        color: #ce9926;
-        font-family: chinese;
-        font-weight: 900;
-    }
-
-    .grid-tabla a:hover{
-        color: white;        
-    }
-
-/* index - estilos sección "discografía"*/
-.img-arte-de-tapa .img-disco{
-    margin: auto;
-    display: block;
-    height: 18rem;
-}
-
-/* index - estilo sección "video" */
-iframe {
-    display: block;
-    margin: auto;
-}
-
-/* Estilos footer */
-footer{
-    background-color:black;
-    text-align: center;
-}
-
-    .redes{
-        display: flex;
-        justify-content:center;
-        padding: 1rem;
-    }
-
-    .nuestras-redes p{
-        margin-top: 2rem;
-    }
-
-    .link-icon svg{
-        width: 40px;
-        height: 40px;
-        color: white;
-        margin: 0rem 1rem 0rem 1rem;
-    }
-
-    .link-icon svg:hover{
-        color: #7567C3;
-    }
-
-/* estilos pages: GALERIA */
-.galeria-links{
-    height: 60vh;
-    display: grid;
-    grid-template-columns: repeat(2,40%);
-    grid-template-rows: repeat(2,50%);
-    justify-content: center;
-    gap: 0.5em;
-}
-
-.galeria-links img{
+/* Estilos pages: GALERIA */
+body main .contenedor .galeria-links {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: repeat(2, 50%);
+  justify-content: center;
+  gap: 0.5em; }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .galeria-links {
+      grid-template-columns: repeat(4, 20%);
+      grid-template-rows: 100%; } }
+  body main .contenedor .galeria-links img {
     opacity: 0.6;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
+    object-fit: cover; }
+    body main .contenedor .galeria-links img:hover {
+      opacity: 1; }
 
-.galeria-links img:hover{
-    opacity: 1;
-}
-
-/* estilos pages: BIOGRAFIA */
-.contenedor-bio{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    justify-content: center;
-    padding: 0rem 1.5rem 0rem 1.5rem;
-}
-
-.contenedor-bio img{
-    width:100%;
+/* Estilos pages: GALERIA - carpeta uno */
+body main .contenedor .galeria-imagenes-uno {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 0.5rem;
+  margin: 0rem 2rem 0rem 2rem; }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .galeria-imagenes-uno {
+      grid-template-columns: repeat(3, 33%);
+      grid-template-rows: repeat(5, 20%); } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .galeria-imagenes-uno {
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows: repeat(4, 25%);
+      gap: 0.2rem; } }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .galeria-imagenes-uno .img-span-uno {
+      grid-row: span 1; } }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .galeria-imagenes-uno .img-span-dos {
+      grid-row: span 2; } }
+  @media screen and (min-width: 800px) {
+    body main .contenedor .galeria-imagenes-uno .img-catorce {
+      display: none; } }
+  @media screen and (min-width: 1200px) {
+    body main .contenedor .galeria-imagenes-uno .img-catorce {
+      display: block; } }
+  body main .contenedor .galeria-imagenes-uno div img {
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    grid-column: span 1;
-}
-
-/* estilos pages: GALERIA - carpeta uno */
-main .galeria-imagenes-uno{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    gap: 0.5rem;
-    margin: 0rem 2rem 0rem 2rem;
-}
-
-main .galeria-imagenes-uno div img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-}
-
-.iframe-contenedor{
-    display: grid;
-    row-gap: 2rem;
-    justify-content: center;
-}
-
-.contenedor-btn{
-    text-align: center;
-}
-
-.btn a{
-    text-decoration: none;
-}
-
-.btn a:hover{
-    background-color: yellow
-}
-
-/* media querys TABLET */
-@media screen and (min-width: 800px){
-
-    .bio-contenedor{
-        height: 75vh;
-    }
-
-    header .container-fluid{
-        margin: 0rem 2rem 0rem 2rem;
-    }
-
-    .grid-tabla{
-        display: grid;
-        grid-template-columns: repeat(2,50%);
-    }
-
-    hr{
-        display: none;
-    }
-
-    .img-arte-de-tapa .img-disco{
-        height: 22rem;
-    }
-
-    iframe {
-        height: 340px;
-        width: 600px;
-    }
-
-    .link-icon svg{
-        width: 40px;
-        height: 40px;
-        color: white;
-        margin: 0rem 2.5rem 0rem 2.5rem;
-    }
-
-    .galeria-links{
-        grid-template-columns: repeat(4,20%);
-        grid-template-rows: 100%;
-    }
-
-    .contenedor-bio{
-        grid-template-columns: 30% 20% 40%;
-        grid-template-rows: 35% 35% 30%;
-        row-gap: 0.5rem;
-    }
-
-    .contenedor-bio img{
-        grid-column: span 2;
-        grid-row: span 2;
-        margin-left: 1rem;
-    }
-
-    #ultimo{
-        grid-column: span 4;
-        margin-left: 1rem;
-    }
-
-    .contenedor-bio p{
-        grid-column: span 2;
-        grid-row: span 1;
-        margin-left: 2rem;
-    }
-
-    main .galeria-imagenes-uno{
-        grid-template-columns: repeat(3, 33%);
-        grid-template-rows: repeat(5, 20%);
-    }
-
-    main .galeria-imagenes-uno .img-span-uno{
-        grid-row: span 1;
-    }
-
-    main .galeria-imagenes-uno .img-span-dos{
-        grid-row: span 2;
-    }
-
-    main .galeria-imagenes-uno .img-catorce{
-        display: none;
-    }
-
-}
-  
-/* media querys DESKTOP */
-@media screen and (min-width: 1200px){
-
-    .bio-contenedor{
-        height: auto;
-    }
-    
-    .grid-tabla{
-        grid-template-columns: 90%;
-        grid-template-rows: repeat(2,auto);
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .grid-tabla .grid-item{
-        display: grid;
-        grid-template-columns: repeat(4,25%);
-        justify-content: center;
-    }
-
-    .grid-tabla .grid-item hr{
-        display: block;
-        grid-column: span 4;
-    }
-
-    .img-arte-de-tapa .img-disco{
-        height: 26rem;
-    }
-
-    iframe {
-        height: 400px;
-        width: 650px;
-    }
-
-    .contenedor-bio{
-        grid-template-columns: 35% 40%;
-        grid-template-rows: repeat(3,auto);
-        row-gap: 0.5rem;
-    }
-
-    .contenedor-bio img{
-        grid-column: span 1;
-        grid-row: span 3;
-    }
-
-    .contenedor-bio p{
-        grid-column: span 1;
-        margin-left: 2rem;
-    }
-
-    #ultimo{
-        grid-column: span 1;
-        margin-left: 2rem;
-    }
-
-    main .galeria-imagenes-uno{
-        grid-template-columns: repeat(4, 25%);
-        grid-template-rows: repeat(4, 25%);
-        gap: 0.2rem;
-    }
-
-    main .galeria-imagenes-uno .img-catorce{
-        display: block;
-    }
-
-}
-
-
-
-
-
+    object-fit: cover; }

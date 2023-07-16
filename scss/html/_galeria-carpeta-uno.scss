@@ -1,0 +1,53 @@
+@import "../utilidades/mixin";
+
+/* Estilos pages: GALERIA - carpeta uno */
+body{
+    main{
+        .contenedor{
+            .galeria-imagenes-uno{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                gap: 0.5rem;
+                margin: 0rem 2rem 0rem 2rem;
+
+                @include tablet {
+                    grid-template-columns: repeat(3, 33%);
+                    grid-template-rows: repeat(5, 20%);
+                }
+                @include desktop {
+                    grid-template-columns: repeat(4, 25%);
+                    grid-template-rows: repeat(4, 25%);
+                    gap: 0.2rem;
+                }     
+                
+                .img-span-uno{
+                    @include tablet{
+                        grid-row: span 1;
+                    }
+                }
+                .img-span-dos{
+                    @include tablet {
+                        grid-row: span 2;
+                    }
+                }
+                .img-catorce{
+                    @include tablet {
+                        display: none;
+                    }
+                    @include desktop {
+                        display: block;
+                    }
+                }
+
+                div{
+                    img{
+                        width: 100%; 
+                        height: 100%;
+                        object-fit: cover; 
+                    }   
+                }
+            }    
+        }
+    }
+}
