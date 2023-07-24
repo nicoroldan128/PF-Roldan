@@ -24,10 +24,10 @@
 
 // Estilos barra navegación
 header{
+    
     nav{
         .container-fluid{
             margin: 0rem;
-        
             ul{
                 li{
                     a{
@@ -46,6 +46,10 @@ header{
             @include tablet {
                 margin: 0rem 2rem 0rem 2rem;
             } 
+            #navbarNav{
+                justify-content: end;
+                
+            }
         }        
     }    
 }
@@ -67,7 +71,7 @@ body{
                 font-family: chinese;
             }
             .titulo-pages{
-                padding-top: 2rem;
+                padding-top: 72px;
             }
 
             p{

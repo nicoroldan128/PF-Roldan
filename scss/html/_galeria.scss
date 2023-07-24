@@ -5,8 +5,8 @@ body{
             .galeria-links{
                 height: 60vh;
                 display: grid;
-                grid-template-columns: repeat(2,40%);
-                grid-template-rows: repeat(2,50%);
+                grid-template-columns: repeat(2, 40%);
+                grid-template-rows: repeat(2, 50%);
                 justify-content: center;
                 gap: 0.5em;
 
@@ -15,16 +15,35 @@ body{
                     grid-template-rows: 100%;
                 } 
             
-                img{
-                    opacity: 0.6;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                .imagen-galeria{
+                    position: relative;
 
-                    &:hover{
-                        opacity: 1;
+                    img{
+                        opacity: 0.6;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                        &:hover{
+                            opacity: 1;
+                        }
                     }
-                }                 
+                    .texto-imagen{
+                        position: absolute;
+                        top: 80%;
+                        left: 40%;
+                        transform: translate(-50%, -50%);
+                        color: $color-principal;
+                        
+                        @include tablet {
+                            font-size: 1.2rem;
+                            top: 85%;
+                        } 
+                        @include desktop {
+                            top: 90%;
+                        } 
+                    }
+                }                  
             }            
         }
     }

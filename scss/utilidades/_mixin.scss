@@ -12,3 +12,8 @@
         @content;
     }    
 }
+
+@mixin tamanio-iframe($h, $w){
+    height: $h;
+    width: $w;
+}

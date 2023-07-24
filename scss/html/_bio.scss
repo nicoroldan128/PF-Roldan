@@ -15,12 +15,13 @@ body{
 
                 @include tablet {
                     grid-template-columns: 30% 20% 40%;
-                    grid-template-rows: 35% 35% 30%;
+                    grid-template-rows: 30% 30% 20% 20%;
                     row-gap: 0.5rem;
                 } 
                 @include desktop {
-                    grid-template-columns: 35% 40%;
-                    grid-template-rows: repeat(3,auto);
+                    grid-template-columns: 30% 35%;
+                    grid-template-rows: repeat(4,auto);
+                    
                 }
 
                 img{
@@ -31,7 +32,7 @@ body{
 
                     @include tablet {
                         grid-column: span 2;
-                        grid-row: span 2;
+                        grid-row: span 3;
                         margin-left: 1rem;
                     }
                     @include desktop {
@@ -56,8 +57,7 @@ body{
                         margin-left: 1rem;
                     }
                     @include desktop {
-                        grid-column: span 1;
-                        margin-left: 2rem;             
+                        grid-column: span 2;             
                     }     
                 }
             }                
@@ -67,10 +67,7 @@ body{
 
     .bio-contenedero{
         @include tablet {
-            height: 75vh;
-        }
-        @include desktop {
-            height: auto;
+            height: 80vh;
         }
     }       
 }

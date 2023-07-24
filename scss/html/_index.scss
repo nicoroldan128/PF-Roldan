@@ -5,8 +5,10 @@
 /* Estilos sección "próximos shows" */
 body{
     main{
+        
         .contenedor{
             .seccion-proximos-shows{
+                margin-top: 36px;
                 background-image: url(../assets/img/img-principales/foto-proximas-fechas.jpg);
                 background-position: center;
                 background-repeat: no-repeat;
@@ -102,13 +104,13 @@ body{
             iframe {
                 display: block;
                 margin: auto;
+                @include tamanio-iframe(200px, 360px);
+
                 @include tablet{
-                    height: 340px;
-                    width: 600px;
+                    @include tamanio-iframe(300px, 500px);
                 }
                 @include desktop{
-                    height: 400px;
-                    width: 650px;
+                    @include tamanio-iframe(400px, 650px);
                 }   
             }            
         }

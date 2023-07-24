@@ -1,10 +1,18 @@
 /* Estilos pages: VIDEO */
 body{
     main{
-        .contenedor-btn{
-            text-align: center;
-            .btn{
-                margin-top: 1rem;
+        .contenedor{
+            .iframe-contenedor{
+                display: flex;
+                flex-direction: column;
+                height: 50vh;
+
+                .contenedor-btn{
+                    text-align: center;
+                    .btn{
+                        margin-top: 2rem;
+                    }
+                }
             }
         }
     }   
