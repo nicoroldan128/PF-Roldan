@@ -58,17 +58,16 @@ body{
     main{
         background-color: $color-body;
         .contenedor {
-            padding-bottom: 2.5rem;
+            padding-bottom: 2rem;
 
-            .titulo-seccion{
-                @extend %titulos;
-            }
-            .subtitulo-seccion{
-                font-size:36px;
-                color: $color-tercero;
-                display: block;
-                text-align: center;
-                font-family: chinese;
+            .inicio-seccion{
+                margin-top: 1rem;
+                .titulo-seccion{
+                    @extend %titulos;
+                }
+                .subtitulo-seccion{
+                    @extend %subtitulos;
+                }
             }
             .titulo-pages{
                 padding-top: 72px;
@@ -136,5 +135,8 @@ body{
 @import "html/galeria";
 
 // Estilos pagina GALERIA
-@import "html/galeria-carpeta-uno"
+@import "html/galeria-carpeta";
+
+// Estilos pagina DISCOGRAFÍA
+@import "html/discografia";
 

@@ -81,8 +81,8 @@ body{
         .contenedor{
             .img-arte-de-tapa{
                 .img-disco{
-                    margin: auto;
                     display: block;
+                    margin: auto;
                     height: 18rem;
 
                     @include tablet {

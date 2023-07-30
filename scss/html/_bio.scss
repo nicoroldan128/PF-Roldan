@@ -29,7 +29,7 @@ body{
                     height: 100%;
                     object-fit: cover;
                     grid-column: span 1;
-
+                    
                     @include tablet {
                         grid-column: span 2;
                         grid-row: span 3;

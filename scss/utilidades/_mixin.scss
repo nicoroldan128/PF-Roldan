@@ -17,3 +17,8 @@
     height: $h;
     width: $w;
 }
+
+@mixin tamanio-img($h, $w){
+    height: $h;
+    width: $w;
+}
