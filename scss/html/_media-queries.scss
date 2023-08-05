@@ -94,6 +94,7 @@
                     margin: 0 auto;   
                     
                     .info-disco{
+                        @include tamanio-img (fit-content, 100%);
                         .desc-info-ficha{
                             display: block;
                         }
