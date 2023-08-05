@@ -119,8 +119,8 @@ body main .contenedor .img-arte-de-tapa .img-disco {
 body main .contenedor iframe {
   display: block;
   margin: auto;
-  height: 250px;
-  width: 400px; }
+  height: 200px;
+  width: 360px; }
 
 /* Estilos pages: BIOGRAFIA */
 body main .contenedor .contenedor-bio {
