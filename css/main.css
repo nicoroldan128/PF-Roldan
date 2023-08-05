@@ -50,7 +50,8 @@ body main {
     body main .contenedor .inicio-seccion {
       margin-top: 1rem; }
     body main .contenedor .titulo-pages {
-      padding-top: 72px; }
+      padding-top: 72px;
+      margin: 0 1rem; }
     body main .contenedor p {
       color: #d0d0d0; }
 
