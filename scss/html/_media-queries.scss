@@ -1,0 +1,306 @@
+// Media Queries TABLET 
+
+@include tablet{
+
+    /*Generales*/
+    header{
+        nav{
+            .container-fluid{
+                margin: 0rem 2rem 0rem 2rem;
+            }        
+        }    
+    }
+
+    /*MQ Tablet Footer */
+    body{
+        footer{
+            .contenedor {
+                .link-icon{
+                    svg{
+                        margin: 0rem 2.5rem 0rem 2.5rem;
+                    }
+                }
+            }
+        } 
+    }
+
+    /*MQ Tablet Index*/
+    body{
+        main{
+            .contenedor{
+                // Estilos sección "próximos shows"
+                .grid-tabla{
+                    display: grid;
+                    grid-template-columns: repeat(2,50%);
+                    .grid-item{
+                        hr{
+                            display: none;                         
+                        }
+                    }
+                }
+                //Estilos sección "discografía"
+                .img-arte-de-tapa{
+                    .img-disco{
+                        height: 22rem;
+                    }
+                }  
+                //Estilos sección "video"
+                iframe{
+                    @include tamanio-iframe(300px, 500px);
+                    
+                }
+            }    
+        }
+    }
+
+    /*MQ Tablet Biografia*/
+    body{
+        main{
+            .contenedor{
+                .contenedor-bio{
+                    grid-template-columns: 30% 20% 40%;
+                    grid-template-rows: repeat(4, auto);  
+                    max-width: 900px;
+                    margin: 2rem auto;
+                    
+                    img{
+                        grid-column: span 2;
+                        grid-row: span 3;
+                        margin-left: 1rem;
+                    }
+                    p{
+                        grid-column: span 2;
+                        grid-row: span 1;
+                        margin-left: 2rem;                        
+                    }
+                    #p-full{
+                        grid-column: span 4;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /*MQ Tablet Discografía*/
+    body{
+        main{
+            .contenedor{
+                .contenedor-discografia{
+                    display: grid;
+                    grid-template-columns: 40% 50%;
+                    gap: 2rem;
+                    justify-content: center;
+                    margin: 0 auto;   
+                    
+                    .info-disco{
+                        .desc-info-ficha{
+                            display: block;
+                        }
+                    }
+                }
+
+                .contenedor-reproductor-letras{
+                    grid-column: 2/3;
+
+                    .contenedor-reproductor{
+                        width: 100%;
+                    }
+                    .seccion-letra{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /*MQ Tablet Video*/
+    body{
+        main{
+            .contenedor{
+                .iframe-contenedor{
+                    justify-content: center;
+                    iframe{
+                        @include tamanio-iframe(400px, 700px); 
+                    }
+                }
+            }
+        }   
+    }
+
+    /*MQ Tablet Galeria*/
+    body{
+        main{
+            .contenedor{
+                .galeria-links{
+                    grid-template-columns: repeat(4,21%);
+                    grid-template-rows: 100%;
+
+                    .imagen-galeria{
+                        .texto-imagen{
+                            font-size: 1.2rem;
+                            top: 85%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*MQ Tablet Galeria- carpeta*/
+    body{
+        main{
+            .contenedor{
+                .galeria-imagenes{
+                    grid-template-columns: repeat(3, 32%);
+                    grid-template-rows: repeat(5, 20%);
+
+                    .img-span-uno{
+                        grid-row: span 1;
+                    }
+                    .img-span-dos{
+                        grid-row: span 2;
+                    }
+                    .img-catorce{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+// fin MQ tablet
+}
+
+// Media Queries DESKTOP 
+
+@include desktop{
+
+    /*MQ Desktop Index*/
+    body{
+        main{
+            .contenedor{
+                // Estilos sección "próximos shows"
+                .grid-tabla{
+                    grid-template-columns: 90%;
+                    grid-template-rows: repeat(2,auto);
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    
+                    .grid-item{
+                        display: grid;
+                        grid-template-columns: repeat(4,20%);
+                        justify-content: center; 
+                        
+                        hr{
+                            display: block;
+                            grid-column: span 4; 
+                        }
+                    }
+                }
+                //Estilos sección "discografía"
+                .img-arte-de-tapa{
+                    .img-disco{
+                        height: 26rem;
+                    }
+                }
+                //Estilos sección "video"
+                iframe{
+                    @include tamanio-iframe(400px, 650px);
+                } 
+            }    
+        }
+    }
+
+    /*MQ Desktop Biografia*/
+    body{
+        main{
+            .contenedor{
+                .contenedor-bio{
+                    grid-template-columns: 50% 38%;
+                    max-width: 1050px;
+                    margin: 25px auto 55px auto;
+                    img{
+                        grid-column: span 1;
+                        grid-row: span 2;                         
+                    }
+                    p{
+                        grid-column: span 1; 
+                        font-size: 1.1rem;
+                    }
+                    
+                    #p-full{
+                        grid-column: span 2;                
+                    }                    
+                }
+            }
+        }
+    }   
+    
+    /*MQ Desktop Discografía*/
+    body{
+        main{
+            .contenedor{
+                .contenedor-discografia{
+                    max-width: 1200px;                    
+                }
+            }
+        }
+    }
+
+    /*MQ Desktop Video*/
+    body{
+        main{
+            .contenedor{
+                .iframe-contenedor{
+                    iframe{
+                        @include tamanio-iframe(500px, 900px); 
+                    }
+                }
+            }
+        }   
+    }
+    
+    /*MQ Desktop Galeria*/
+    body{
+        main{
+            .contenedor{
+                .galeria-links{
+                    grid-template-columns: repeat(4,15%);  
+                    justify-content: center;
+                }
+                .imagen-galeria{
+                    .texto-imagen{
+                        top: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    /*MQ Tablet Galeria- carpeta*/
+    body{
+        main{
+            .contenedor{
+                .galeria-imagenes{
+                        grid-template-columns: repeat(4, 25%);
+                        grid-template-rows: repeat(4, 25%);
+                        gap: 0.2rem;
+                    .img-catorce{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+}
+
+
+
+
+

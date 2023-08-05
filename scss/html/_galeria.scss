@@ -10,15 +10,6 @@ body{
                 justify-content: center;
                 gap: 0.5em;
 
-                @include tablet {
-                    grid-template-columns: repeat(4,21%);
-                    grid-template-rows: 100%;
-                } 
-                
-                @include desktop {
-                    grid-template-columns: repeat(4,15%);
-                } 
-            
                 .imagen-galeria{
                     position: relative;
 
@@ -38,14 +29,6 @@ body{
                         left: 40%;
                         transform: translate(-50%, -50%);
                         color: $color-principal;
-
-                        @include tablet {
-                            font-size: 1.2rem;
-                            top: 85%;
-                        } 
-                        @include desktop {
-                            top: 90%;
-                        } 
                     }
                 }                  
             }            

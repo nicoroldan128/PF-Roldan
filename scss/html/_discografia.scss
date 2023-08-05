@@ -1,98 +1,75 @@
+/* Estilos pages: DISCOGRAFIA */ 
+
 body{
     main{
         .contenedor{
-                .contenedor-discografia{
-                    padding: 0rem 2rem 1rem 2rem;
-
-                    @include tablet {
-                       display: inline-block;
-                       width: 100%;
-                    } 
-                    @include desktop {
-                       /*max-width: 1200px; */
+            .contenedor-discografia{
+                padding: 1rem 2rem 1rem 2rem;
+    
+                .info-disco{
+                    .img-disco{
+                        @include tamanio-img (fit-content, 100%);
+                        margin-bottom: 1rem; 
                     }
-
-                    .info-disco{
-                        margin-bottom: 2rem; 
-    
-                        @include tablet {
-                                position: sticky;
-                                top: 100px;
-                                float: left; 
-                                width: 40%;  
-                        } 
-                        
-                        .img-disco{
-                            @include tamanio-img (100%, 100%);
-                            margin-bottom: 1rem; 
+                    .descripcion-disco{
+                        margin-bottom: 2rem;
+                        .desc-info{
+                            font-family: ghotam;
+                            color: $color-parrafo;
+                            margin-bottom: 0.3rem;
                             
-                        }
-                        .descripcion-disco{
-    
-                            .desc-info{
-                                font-family: ghotam;
-                                color: $color-parrafo;
-                                margin-bottom: 0.2rem;
-                                svg{
-                                    display: inline;
-                                    color: $color-parrafo;  
-                                    margin-right: 1rem;
-                                }
-                                p{
-                                    display: inline;
-                                }
+                            svg{
+                                color: $color-parrafo;  
+                                margin-right: 0.5rem;
                             }
-                        } 
+                            p{
+                                display: inline;
+                            }
+                        }
+                    } 
+                    .desc-info-ficha{
+                        display: none;
+                        padding-top: 1rem;
                     }
                 }
-                .contenedor-reproductor-letras{
-    
-                    @include tablet{
-                        float: right;
-                        width: 55%;    
-                    }
-    
-                    .contenedor-reproductor{
-                        margin-bottom: 1rem;
-                        
-                        iframe{
-                            @include tamanio-iframe(30rem, 100%);
-                        }
-                    }
+            }
+            .contenedor-reproductor-letras{
+                .contenedor-reproductor{
+                    margin-bottom: 1rem;
                     
-                    .seccion-letras{
-
-                        margin: 1rem 0rem 1rem 0rem;
+                    iframe{
+                        @include tamanio-iframe(30rem, 100%);
+                    }
+                }
+                
+                .seccion-letras{
+                    margin: 1rem 0rem 1rem 0rem;
     
-                        @include tablet{
-                            width: 100%;
-                        }
-    
-                        .accordion{
-                            .accordion-item{
-                                .accordion-header{ 
-                                    .accordion-button{
-                                        color: $accordion-button-color;
-                                        background-color: $accordion-button-bg;
-                                        
-                                        &:focus{
-                                            background: $accordion-button-focus-bg;
-                                            color: $accordion-button-focus-color;
-                                            font-weight: bold;
-                                            box-shadow: none;
-                                        }                         
-                                    } 
-                                }
-                                .accordion-body{
+                    .accordion{
+                        .accordion-item{
+                            .accordion-header{ 
+                                .accordion-button{
+                                    color: $accordion-button-color;
                                     background-color: $accordion-button-bg;
-                                    font-size: 1rem;
-                                    p{
-                                        color: $color-parrafo;
-                                    };
+                                    
+                                    &:focus{
+                                        background: $accordion-button-focus-bg;
+                                        color: $accordion-button-focus-color;
+                                        font-weight: bold;
+                                        box-shadow: none;
+                                    }                         
                                 } 
                             }
+                            .accordion-body{
+                                background-color: $accordion-button-bg;
+                                font-size: 1rem;
+                                p{
+                                    color: $color-parrafo;
+                                };
+                            } 
                         }
                     }
+                }
             } 
         }
     }

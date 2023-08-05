@@ -1,15 +1,11 @@
-@import "utilidades/variables";
-
-@import "utilidades/mixin";
-@import "utilidades/extend";
-
+// Reset
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
-// fuentes utilizadas
+
+/*Fuentes utilizadas*/
 @font-face {
     font-family: chinese;
     src: url(../assets/fonts/chinese-rocks.otf);
@@ -20,11 +16,14 @@
     src: url(../assets/fonts/ghotam-rocks.otf);
 }
 
-// Estilos generales
+//Import utilidades
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
 
-// Estilos barra navegación
+/*Estilos generales*/
+/*Estilos barra navegación*/
 header{
-    
     nav{
         .container-fluid{
             margin: 0rem;
@@ -43,12 +42,8 @@ header{
                 }
             }
 
-            @include tablet {
-                margin: 0rem 2rem 0rem 2rem;
-            } 
             #navbarNav{
-                justify-content: end;
-                
+                justify-content: end;   
             }
         }        
     }    
@@ -80,11 +75,7 @@ body{
     }
 }
 
-// Estilos del footer
-
-
-@import "html/index";
-
+/*Estilos del footer*/
 body{
     footer{
         background-color:$color-footer;
@@ -115,15 +106,14 @@ body{
                     &:hover{
                         color: $color-secundario;
                     }
-
-                    @include tablet {
-                        margin: 0rem 2.5rem 0rem 2.5rem;
-                    }  
                 }
             }
         }
     } 
 }
+
+// Estilos pagina INDEX
+@import "html/index";
 
 // Estilos pagina BIO
 @import "html/bio";
@@ -139,4 +129,7 @@ body{
 
 // Estilos pagina DISCOGRAFÍA
 @import "html/discografia";
+
+// Estilos MEDIA QUERIES
+@import "html/media-queries";
 

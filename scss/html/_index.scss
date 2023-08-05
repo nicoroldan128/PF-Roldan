@@ -1,11 +1,6 @@
-@import "../utilidades/variables";
-@import "../utilidades/mixin";
-
-
 /* Estilos sección "próximos shows" */
 body{
     main{
-        
         .contenedor{
             .seccion-proximos-shows{
                 margin-top: 36px;
@@ -23,33 +18,9 @@ body{
                 row-gap: 1rem;
                 text-align: center; 
 
-                @include tablet {
-                    display: grid;
-                    grid-template-columns: repeat(2,50%);
-                } 
-                @include desktop {
-                    grid-template-columns: 90%;
-                    grid-template-rows: repeat(2,auto);
-                    margin-top: 30px;
-                    margin-bottom: 30px;            
-                }
-
                 .grid-item{
-                    @include desktop {
-                        display: grid;
-                        grid-template-columns: repeat(4,25%);
-                        justify-content: center;
-                    }
-
                     hr{
                         color: $color-parrafo;
-                        @include tablet {
-                            display: none;
-                        } 
-                        @include desktop {
-                            display: block;
-                            grid-column: span 4;                    
-                        }
                     }
                     .item-fecha{
                         font-size: 1.5rem;
@@ -84,13 +55,6 @@ body{
                     display: block;
                     margin: auto;
                     height: 18rem;
-
-                    @include tablet {
-                        height: 22rem;
-                    } 
-                    @include desktop {
-                        height: 26rem;
-                    }
                 }
             }            
         }
@@ -104,14 +68,7 @@ body{
             iframe {
                 display: block;
                 margin: auto;
-                @include tamanio-iframe(200px, 360px);
-
-                @include tablet{
-                    @include tamanio-iframe(300px, 500px);
-                }
-                @include desktop{
-                    @include tamanio-iframe(400px, 650px);
-                }   
+                @include tamanio-iframe(250px, 400px);
             }            
         }
     }
