@@ -122,6 +122,7 @@
                 .iframe-contenedor{
                     justify-content: center;
                     iframe{
+                        max-width: 900px; 
                         @include tamanio-iframe(400px, 700px); 
                     }
                 }

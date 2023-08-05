@@ -285,6 +285,7 @@ body main .contenedor .contenedor-reproductor-letras .seccion-letras {
   body main .contenedor .iframe-contenedor {
     justify-content: center; }
     body main .contenedor .iframe-contenedor iframe {
+      max-width: 900px;
       height: 400px;
       width: 700px; }
   /*MQ Tablet Galeria*/
