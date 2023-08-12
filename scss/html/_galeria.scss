@@ -25,10 +25,19 @@ body{
                     }
                     .texto-imagen{
                         position: absolute;
-                        top: 80%;
-                        left: 40%;
-                        transform: translate(-50%, -50%);
-                        color: $color-principal;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        
+                        display: flex;
+                        align-items: end;
+                        padding: 0 1rem 1rem 1rem;
+                        p{
+                            color: $color-principal;
+                            margin-bottom: 0;
+                        }
+
                     }
                 }                  
             }            

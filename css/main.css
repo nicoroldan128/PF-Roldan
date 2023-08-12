@@ -70,12 +70,11 @@ body footer {
       display: flex;
       justify-content: center;
       padding: 1rem; }
-    body footer .contenedor .link-icon svg {
-      width: 40px;
-      height: 40px;
+    body footer .contenedor .link-icon i {
+      font-size: 2rem;
       color: white;
-      margin: 0rem 1rem 0rem 1rem; }
-      body footer .contenedor .link-icon svg:hover {
+      margin: 0rem 1.5rem; }
+      body footer .contenedor .link-icon i:hover {
         color: #7567C3; }
 
 /* Estilos sección "próximos shows" */
@@ -167,10 +166,16 @@ body main .contenedor .galeria-links {
         opacity: 1; }
     body main .contenedor .galeria-links .imagen-galeria .texto-imagen {
       position: absolute;
-      top: 80%;
-      left: 40%;
-      transform: translate(-50%, -50%);
-      color: #91BCE9; }
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: end;
+      padding: 0 1rem 1rem 1rem; }
+      body main .contenedor .galeria-links .imagen-galeria .texto-imagen p {
+        color: #91BCE9;
+        margin-bottom: 0; }
 
 /* Estilos pages: GALERIA - carpeta */
 body main .contenedor .galeria-imagenes {
@@ -198,7 +203,7 @@ body main .contenedor .contenedor-discografia {
       font-family: ghotam;
       color: #d0d0d0;
       margin-bottom: 0.3rem; }
-      body main .contenedor .contenedor-discografia .info-disco .descripcion-disco .desc-info svg {
+      body main .contenedor .contenedor-discografia .info-disco .descripcion-disco .desc-info i {
         color: #d0d0d0;
         margin-right: 0.5rem; }
       body main .contenedor .contenedor-discografia .info-disco .descripcion-disco .desc-info p {
@@ -234,8 +239,9 @@ body main .contenedor .contenedor-reproductor-letras .seccion-letras {
   header nav .container-fluid {
     margin: 0rem 2rem 0rem 2rem; }
   /*MQ Tablet Footer */
-  body footer .contenedor .link-icon svg {
-    margin: 0rem 2.5rem 0rem 2.5rem; }
+  body footer .contenedor .link-icon i {
+    font-size: 2.5rem;
+    margin: 0rem 2.5rem; }
   /*MQ Tablet Index*/
   body main .contenedor .grid-tabla {
     display: grid;

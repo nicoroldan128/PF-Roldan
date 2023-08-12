@@ -98,11 +98,10 @@ body{
                 padding: 1rem;
             }
             .link-icon{
-                svg{
-                    width: 40px;
-                    height: 40px;
+                i{
+                    font-size: 2rem;
                     color: $color-cuarto;
-                    margin: 0rem 1rem 0rem 1rem;
+                    margin: 0rem 1.5rem;
 
                     &:hover{
                         color: $color-secundario;
